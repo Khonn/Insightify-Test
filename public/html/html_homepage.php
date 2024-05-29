@@ -39,7 +39,7 @@
             
             <div class="login_signup_btn">
                 <a href="#" class="btn1">Download App</a>
-                <a href="html/html_login-signup.php" class="btn2">Sign in</a>
+                <a href="html/login-signup.php" class="btn2">Sign in</a>
             </div>
         </nav>
     </header>

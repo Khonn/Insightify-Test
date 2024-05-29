@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
     <head>
-        <title>Sign In - Insightify</title>
-        <link rel="icon" href="public/logo/symbol_blue.png">
-
         <meta charset="UTF-8">
         <meta name="wiewport" content="width=device-width, initial-scale=1.0">
-
         <script
             src="https://kit.fontawesome.com/64d58efce2.js"
             crossorigin="anonymous">
         </script>
-
-        <script src="/public/js/login-signup.js" defer></script>
-        
-        <link rel="stylesheet" href="/public/css/login-signup.css">
+        <title>Sign In & Sign Up Form</title>
+        <link rel="stylesheet" href="css/login-signup.css">
     </head>
-
-
-
     <body>
         <div class="container">
             <div class="forms-container">
@@ -42,9 +30,7 @@
                             <input type="password" placeholder="Input Password">
                         </div>
                         <a href="#" class="forgot-password">Forgot Password?</a>
-                        <a href="/public/html/dashboard.php">
-                            <button type="button" class="btn solid" style="font-family: Poppins;">Sign In</button> 
-                          </a>
+                        <input type="submit" value="Sign In" class="btn solid">
 
                         <p class="social-text">────────── or continue with ──────────</p>
                         <div class="social-media">
@@ -101,7 +87,7 @@
                                 Elevate your literacy and understanding—take the first step and sign up now!</p>
                         </div>
 
-                        <img src="/img/log.svg" class="image" alt="">
+                        <img src="img/log.svg" class="image" alt="">
                     </div>
 
                     <div class="panel right-panel">
@@ -112,11 +98,11 @@
                                 Don't miss out on the latest insights—log in today and discover something new!</p>
                         </div>
 
-                        <img src="/img/register.svg" class="image" alt="">
+                        <img src="img/register.svg" class="image" alt="">
                     </div>
                 </div>
             </div>
         
-        
+        <script src="js/login-signup.js"></script>
     </body>
 </html>

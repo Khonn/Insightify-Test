@@ -1,60 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@font-face {
+    font-family: Poppins;
+    src: url(font/Poppins-Medium.ttf);
+}
 @font-face {
     font-family: Poppins_Bold;
     src: url(font/Poppins-Bold.ttf);
 }
 body {
     margin: 0%;
-    background-color: #f1f9fc;
+    margin-bottom: 70px;
+    background-color: #F2F7FF;
     box-shadow: 20px;
-    font-family: Poppins;
-	font-weight: 700;
-	font-style: bold;
 }
 .content{
     /* background-color: aqua; */
     margin: auto;
-    margin-top: 100px;
+    margin-top: 40px;
     width: 80%;
     height: fit-content;
 }
 
 .content .welcome{
     font-size: 25px;
-    font-family: Poppins;
-    font-weight:700;
+    font-family: Poppins_Bold;
+    /* font-weight:700; */
     color: #505050;
 
 }
-
-
-/* STAT CARD */
 .content .stat_card{
     width: 100%;
-    height: auto;
+    height: 200px;
+    margin-top: 40px;
     background-color: white;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    box-sizing: border-box;
-}
 
+}
 .content .stat_card .container{
-    width: 90%;
-    height: auto;
-    margin: 20px auto;
-    gap: 10px;
+    width: 60%;
+    height: 75%;
+    margin-left: 80px;
+    padding-top: 20px;
     display: flex;
-    flex-direction: column; /* Stack elements vertically on smaller screens */
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
     color: #505050;
-    justify-content: space-around; /* Distribute space around items */
-    flex-wrap: wrap; 
 }
 
 .content .stat_card .container .stat_container{
-    line-height: 5px;
+    line-height: 15px;
 }
 
 .content .stat_card .container .stat_container .desc{
@@ -67,38 +61,21 @@ body {
     font-size: 60px;
 }
 .content .stat_card img{
-    width: auto;
-    height: 250px;
-    object-fit: contain;
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    right: 200px;
 }
-
-/* Media Query for Larger Screens */
-@media (min-width: 768px) { 
-    .content .stat_card .container {
-        flex-direction: row;  /* Arrange items horizontally on larger screens */
-        gap: 40px; /* Increase gap for larger screens */
-    }
-
-    .content .stat_card img {
-        width: 40%; /* Adjust as needed */
-        margin: 0;
-    }
-}
-
-
-
-/* FEATURE CARDS */
 .content .feature{
     margin-top: 70px;
     font-size: 20px;
-    font-family: Poppins;
+    font-family: Poppins_Bold;
     color: #505050;
-}
 
+}
 .content .feature_card{
     width: 100%;
     height: fit-content;
-    
 }
 .content .feature_card .feat_container{
     width: 100%;
@@ -116,8 +93,6 @@ body {
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     justify-content: space-evenly;
-    border: 1px solid #ddd;
-
 }
 .content .feature_card .feat_container .feat_btn:hover{
     background-color: #f1f1f1;
@@ -142,13 +117,13 @@ body {
 }
 .content .feature_card .feat_container .feat_btn div .name{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 150;
     color: #505050;
 }
 .content .feature_card .feat_container .feat_btn div .desc{
     font-size: 15px;
-    font-weight: 500;
-    color: #949494;
+    font-weight: 100;
+    color: #717171;
 }
 .content .other_card{
     width: 100%;
@@ -164,16 +139,12 @@ body {
 }
 .content .other_card .news_main img{
     width: 500px;
-    border-radius: 10px;
 }
 .content .other_card .news_main img:hover{
     cursor: pointer;
 }
 .content .other_card .recos_main img{
-    margin-top: 22px;
     width: 500px;
-    border-radius: 10px;
-    height: 229px;
 }
 .content .other_card .recos_main img:hover{
     cursor:pointer;

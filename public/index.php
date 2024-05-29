@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/public/css/dashboard.css">
-    <link rel="stylesheet" href="/public/css/header.css">
-    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <script src="https://kit.fontawesome.com/ed08dfa832.js" crossorigin="anonymous"></script>
 
-    <script src="/public/js/dropdown-header.js" defer> </script>
+    <script src="js/dropdown-header.js" defer> </script>
     
 </head>
 
@@ -23,7 +23,7 @@
     <header>
         <div class="logo_container">
             <a href="">
-                <img class="logo" src="/public/logo/symbol+full_blue.png" alt="logo"></img>
+                <img class="logo" src="logo/symbol+full_blue.png" alt="logo"></img>
             </a>
         </div>
                 
@@ -38,10 +38,10 @@
             <div class="nav_links_container">
 
                 <ul class="nav_list">
-                    <li><a href="/public/html/dashboard.php">Dashboard</a></li>
-                    <li><a href="/public/html/collection.php">Collection</a></li>
-                    <li><a href="/public/html_about.php">About</a></li>
-                    <li><a href="/public/html_tools.php">Tools</a></li>
+                    <li><a href="html/dashboard.php">Dashboard</a></li>
+                    <li><a href="html/collection.php">Collection</a></li>
+                    <li><a href="/html_about.php">About</a></li>
+                    <li><a href="/html_tools.php">Tools</a></li>
                 </ul>
 
             </div>
@@ -76,7 +76,7 @@
 
                     <hr class="divider2">
 
-                    <a href="/public/html/login-signup.php" style=" margin: 8px 0px;">Log Out</a>
+                    <a href="/html/login-signup.php" style=" margin: 8px 0px;">Log Out</a>
                 </div>
             </div>
 

@@ -15,11 +15,5 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully";
 
-function checkHashPassword($userPassword, $hash) {
-    return password_verify($userPassword, $hash);
-}
-
-
-
 $conn->close();
 ?>

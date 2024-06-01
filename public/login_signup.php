@@ -42,7 +42,6 @@
                             <input type="password" placeholder="Input Password" name="password">
                         </div>
                         <a href="#" class="forgot-password">Forgot Password?</a>
-                        <a href="dashboard.php">
                             <button type="submit"   class="btn solid" style="font-family: Poppins;">Sign In</button> 
                           </a>
 

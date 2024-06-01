@@ -59,11 +59,13 @@ $resullt = $conn->query($sql);
 if($result->num_rows === 1){
 	$row = mysqli_fetch_assoc($result);
 	if($row['email'] === $email){
+	$salt = $row['salt'];
+	$encrypted_password = $row['password'];
+	$hashed_password = checkHashPassword($password, $salt)['passwordHash'];
 	
-		echo "Logged In!";
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['username'] = $row['username'];
-		header("Location: dashboard.php");
+		header("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
 		exit();
 	
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "connection.php";
+include ("connection.php");
 
 
 //Functions
@@ -35,7 +35,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
 	function validate($data){
 		$data = trim($data);
-		$data = stripslashes($_data);
+		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return;
 	}

@@ -52,7 +52,7 @@ else if(empty($password)){
 	exit();
 }
 
-$sql = "SELECT * FROM user_account where='$email'";
+$sql = "SELECT * FROM user_account WHERE email='$email'";
 
 $result = mysqli_query($conn, $sql);
 

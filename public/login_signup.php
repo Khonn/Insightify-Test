@@ -27,23 +27,23 @@
             <div class="forms-container">
                 <div class="signin-signup">
 
-                    <form action="" class="sign-in-form">
+                    <form action="login_function.php" class="sign-in-form" method="post">
                         <img src="./img/img_insightifylogo.png" class="logo-image" alt="">
                         <h2 class="title">Log in to your account</h2>
                         <p class="text-field">email</p>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Input Email">
+                            <input type="text" placeholder="Input Email" name="email">
                         </div>
                         
                         <p class="text-field">password</p>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Input Password">
+                            <input type="password" placeholder="Input Password" name="password">
                         </div>
                         <a href="#" class="forgot-password">Forgot Password?</a>
                         <a href="dashboard.php">
-                            <button type="button" class="btn solid" style="font-family: Poppins;">Sign In</button> 
+                            <button type="submit"   class="btn solid" style="font-family: Poppins;">Sign In</button> 
                           </a>
 
                         <p class="social-text">────────── or continue with ──────────</p>

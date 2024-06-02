@@ -1,7 +1,19 @@
 <?php
 session_start();
-include ("connection.php");
 
+
+//MYSQL
+$db_servername = "sql6.freesqldatabase.com";
+$db_username = "sql6700012";
+$db_password = "D3gevjgE4F";
+$dbname = "sql6700012";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
 //Functions
 
@@ -45,7 +57,7 @@ $sql = "SELECT * FROM user_account WHERE email='$email'";
 
 $resullt = $conn->query($sql);
 
-if($result->num_rows === 1){
+if($result->num_rows === 1 && $result !== FALSE){
 	$row = mysqli_fetch_assoc($result);
 	if($row['email'] === $email){
 	$salt = $row['salt'];
@@ -60,5 +72,8 @@ if($result->num_rows === 1){
 
 	}
 }
-
+else{
+	echo "SQL NOT WORKING";
+}
+$conn->close();
 ?>

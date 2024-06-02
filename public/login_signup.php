@@ -71,22 +71,22 @@ else{
                     </form>
 
 
-                    <form action="" class="sign-up-form">
+                    <form action="register.php" class="sign-up-form">
                         <h2 class="title">Create new account</h2>
-                        <p class="text-field">username</p>
+                        <p class="text-field" name="register">username</p>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Insert Username">
+                            <input type="text" name="username" placeholder="Insert Username">
                         </div>
                         <p class="text-field">email</p>
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
-                            <input type="text" placeholder="Insert Email">
+                            <input type="text" name="email" placeholder="Insert Email">
                         </div>
                         <p class="text-field">password</p>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Insert Password">
+                            <input type="password" name="password" placeholder="Insert Password">
                         </div>
                         <p class="text-field">confirm password</p>
                         <div class="input-field">
@@ -96,7 +96,7 @@ else{
                         <p class="text-field">date of birth</p>
                         <div class="input-field">
                             <i class="fas fa-calendar"></i>
-                            <input type="date" placeholder="MM/DD/YYYY">
+                            <input type="date" name="dateofbirth" placeholder="MM/DD/YYYY">
                         </div>
                         <input type="submit" value="Sign up" class="btn solid">
                     </form>

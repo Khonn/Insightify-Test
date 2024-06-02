@@ -30,7 +30,10 @@ function checkHashPassword($userPassword, $salt) {
 }
 
 $email = $_POST['email'];
-$password = $_POST['password'];
+$username = $_POST['username'];
+$email = $_POST['username'];
+$plain_password = $_POST['password'];
+$dateofbirth = $_POST['dateofbirth'];
 
 if(empty($email) || empty($password)){
 	header ("Location: https://insightify-test-2q7f.onrender.com/login_signup.php?error= Please fill up all the blank fields.");
@@ -44,24 +47,19 @@ $result = $conn->query($sql);
 if($result->num_rows === 1 && $result !== FALSE){
 	$row = mysqli_fetch_assoc($result);
 	if($row['email'] === $email){
-	$salt = $row['salt'];
-	$encrypted_password = $row['password'];
-	$hashed_password = checkHashPassword($password, $salt)['passwordHash'];
-	if($hashed_password == $encrypted_password){
-		$_SESSION['email'] = $row['email'];  
-		$_SESSION['username'] = $row['username'];
-		header("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
-		exit();
-
-	}
-	else{
-		header ("Location: https://insightify-test-2q7f.onrender.com/login_signup.php?error= User not Found");
+		echo "user already registered";
 		exit();
 	}
-
-	}
+    else{
+        
+    }
 }
 else{
-	header ("Location: https://insightify-test-2q7f.onrender.com/login_signup.php?error= Incorrect Password/email");
+	$hash_data = saltHashPassword($plain_password);
+        $password = $hash_data['passwordHash'];
+        $salt = $hash_data['salt'];
+        $sql = "INSERT INTO user_account (`email`, `username`, `password`, `salt`, `date_of_birth`, `date_joined`) VALUES('$email','$username','$password','$salt','$dateofbirth',NOW())";
+        echo "registered sucessfully";
+        exit();
 }
 ?>

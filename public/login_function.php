@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 //Functions
 
-function getRandomStr	ing($length) {
+function getRandomString($length) {
     return bin2hex(random_bytes($length / 2));
 }
 

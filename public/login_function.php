@@ -21,8 +21,8 @@ function getRandomString($length) {
     return bin2hex(random_bytes($length / 2));
 }
 
-function sha512($Userpassword, $salt) {
-    $hash = hash_hmac('sha512', $password, $salt);
+function sha512($userpassword, $salt) {
+    $hash = hash_hmac('sha512', $userpassword, $salt);
     return array(
         'salt' => $salt,
         'passwordHash' => $hash
@@ -66,7 +66,11 @@ if($result->num_rows === 1 && $result !== FALSE){
 	
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['username'] = $row['username'];
-		echo $email + " " + $passworrd + " " + $salt + " " + $encrypted_password + " " + $hashed_password;
+		echo $email;
+		echo $passworrd;
+		echo $salt;
+		echo $encrypted_password;
+		echo $hashed_password;
 		exit();
 	
 

@@ -63,16 +63,15 @@ if($result->num_rows === 1 && $result !== FALSE){
 	$salt = $row['salt'];
 	$encrypted_password = $row['password'];
 	$hashed_password = checkHashPassword($password, $salt)['passwordHash'];
-	
+	if($hashed_password == $encrypted_password){
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['username'] = $row['username'];
-		echo $email;
-		echo $passworrd;
-		echo $salt;
-		echo $encrypted_password;
-		echo $hashed_password;
+		header("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
 		exit();
-	
+	}
+	else{
+		echo "Incorrect Password";
+	}
 
 	}
 }

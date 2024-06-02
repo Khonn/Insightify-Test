@@ -44,12 +44,8 @@ function checkHashPassword($userPassword, $salt) {
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-if(empty($email)){
-	// header ("Location: index.php?error="Email is required");
-	exit();
-}
-else if(empty($password)){
-	// header ("Location: index.php?error="Email is required");
+if(empty($email) || empty($password)){
+	header ("Location: https://insightify-test-2q7f.onrender.com/login_signup.php?error= Please fill up all the blank fields.");
 	exit();
 }
 
@@ -64,13 +60,15 @@ if($result->num_rows === 1 && $result !== FALSE){
 	$encrypted_password = $row['password'];
 	$hashed_password = checkHashPassword($password, $salt)['passwordHash'];
 	if($hashed_password == $encrypted_password){
-		$_SESSION['email'] = $row['email'];
+		$_SESSION['email'] = $row['email'];  
 		$_SESSION['username'] = $row['username'];
 		header("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
 		exit();
+
 	}
 	else{
-		echo "Incorrect Password";
+		header ("Location: https://insightify-test-2q7f.onrender.com/login_signup.php?erro= User not Found");
+		exit();
 	}
 
 	}

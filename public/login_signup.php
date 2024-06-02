@@ -1,6 +1,14 @@
+<?php
+session_start();
+
+if(isset($_SESSION['username']) && isset($_SESSION['email'])) {
+    header ("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
+}
+else{
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 
 
     <head>
@@ -30,6 +38,9 @@
                     <form action="login_function.php" class="sign-in-form" method="post">
                         <img src="./img/img_insightifylogo.png" class="logo-image" alt="">
                         <h2 class="title">Log in to your account</h2>
+                        <?php if(isset($_GET['error'])){ ?> 
+                        <p class="error"> <?php echo $_GET['error']; ?></p>
+                    <?php } ?>
                         <p class="text-field">email</p>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
@@ -119,3 +130,5 @@
         
     </body>
 </html>
+
+<?php } ?>

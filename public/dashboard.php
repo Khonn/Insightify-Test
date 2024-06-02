@@ -76,7 +76,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['email'])) {
 
                     <hr class="divider2">
 
-                    <a href="login_signup.php" style=" margin: 8px 0px;">Log Out</a>
+                    <a href="logout.php" style=" margin: 8px 0px;">Log Out</a>
                 </div>
             </div>
         </nav>
@@ -184,6 +184,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['email'])) {
 <?php
 }
 else{
-    header("Location https://insightify-test-2q7f.onrender.com/homepage.php");
+    header("Location: https://insightify-test-2q7f.onrender.com/homepage.php");
+    exit();
 }
 ?>

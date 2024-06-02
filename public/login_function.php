@@ -21,7 +21,7 @@ function getRandomString($length) {
     return bin2hex(random_bytes($length / 2));
 }
 
-function sha512($user_password, $salt) {
+function sha512($Userpassword, $salt) {
     $hash = hash_hmac('sha512', $password, $salt);
     return array(
         'salt' => $salt,

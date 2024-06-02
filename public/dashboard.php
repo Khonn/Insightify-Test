@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(isset($_SESSION['username']) && isset($_SESSION['email'])) {
+?>
+
+
+
 <html>
 <head>
 
@@ -51,8 +59,8 @@
                         <img src="./img/profile.png" alt="Profile Icon">
 
                         <div class="user_info_dropdown">
-                            <p style="font-weight: 700; font-size: 20px;"> @red.pogi</p>
-                            <p class="email_dropdown">email@gmail.com</p>
+                            <p style="font-weight: 700; font-size: 20px;"> @<?php echo $_SESSION['username']; ?></p>
+                            <p class="email_dropdown"><?php echo $_SESSION['email']; ?></p>
                         </div>
                         
                     </div>
@@ -79,7 +87,7 @@
 
     <div class="content">
 
-        <h1 class="welcome">Welcome back, Chingu</h1>
+        <h1 class="welcome">Welcome back, <?php echo $_SESSION['username']; ?></h1>
 
         <!-- OVERVIEW -->
         <div class="stat_card">
@@ -172,3 +180,10 @@
 </body>
 
 </html>
+
+<?php
+}
+else{
+    header("Location https://insightify-test-2q7f.onrender.com/homepage.php");
+}
+?>

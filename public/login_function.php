@@ -29,14 +29,8 @@ function checkHashPassword($userPassword, $salt) {
     return $passwordData;
 }
 
-
-
-
 $email = $_POST['email'];
 $password = $_POST['password'];
-
-echo $email;
-echo $password;
 
 if(empty($email)){
 	// header ("Location: index.php?error="Email is required");
@@ -60,7 +54,7 @@ if($result->num_rows === 1){
 	
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['username'] = $row['username'];
-		header("Location: https://insightify-test-2q7f.onrender.com/dashboard.php");
+		echo $email + " " + $passworrd + " " + $salt + " " + $encrypted_password + " " + $hashed_password;
 		exit();
 	
 

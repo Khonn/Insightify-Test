@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 //Functions
 
-function getRandomString($length) {
+function getRandomStr	ing($length) {
     return bin2hex(random_bytes($length / 2));
 }
 
@@ -55,7 +55,7 @@ else if(empty($password)){
 
 $sql = "SELECT * FROM user_account WHERE email='$email'";
 
-$resullt = $conn->query($sql);
+$result = $conn->query($sql);
 
 if($result->num_rows === 1 && $result !== FALSE){
 	$row = mysqli_fetch_assoc($result);
